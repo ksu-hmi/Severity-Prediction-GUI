@@ -1,0 +1,28 @@
+import tkinter as tk
+r= tk.Tk()
+r.title("Medical_Prediction")
+
+#Add widgets in this area
+
+#Making the box with an input field for user
+tk.Label(r, text="Enter A Medical Term: ").grid(row=0)
+e1 = tk.Entry(r)
+e1.grid(row=0, column=1)
+
+def show_entry_fields():
+    print("Term: " % (e1.get()))
+    e1.delete(0,tk.END)
+
+def call_back():
+    print("You added a term.")
+
+#Making 2 buttons one for quit and one to show
+tk.Button(r,text= "Quit", command= r.quit).grid(row=3, column=0, sticky=tk.W, pady=4)
+tk.Button(r,text="Show Me", command= show_entry_fields).grid(row=3, column=1, sticky=tk.W, pady=4)
+tk.Button(r, text= "Submit", width= 25,command=call_back)
+
+#button.pack()
+
+
+# This needs to be at the end
+r.mainloop()
