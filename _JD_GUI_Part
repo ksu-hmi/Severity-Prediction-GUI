@@ -1,3 +1,9 @@
+def call_model(string):
+    if type(string) == str:
+        return "test passed, input was a string"
+    else:
+        return "test failed, input was not a string"
+
 import tkinter as tk
 r= tk.Tk()
 r.title("Medical_Prediction")

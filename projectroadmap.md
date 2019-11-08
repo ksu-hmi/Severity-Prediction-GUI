@@ -17,3 +17,4 @@
 - [] 15.  Code call_model(string) to run prediction using transformed input data and Return predicted severity.  Required result:  returned_result = integer value for predicted severity.  Assigned:  Nathan
 - [] 16.  Code output display window to print '"Predicted Severity: ", str(returned result)' Assigned: Jana
 - [] 17.  Prepare code to interpret integer value of severity as its text equivilant.  Assigned:  Jana
+- [x] 18. Code test call_model for use in testing of UI.  Assigned: Nathan
