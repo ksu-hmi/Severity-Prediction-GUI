@@ -5,6 +5,7 @@ def call_model(string):
         return "test failed, input was not a string"
 
 import tkinter as tk
+from tkinter import messagebox
 r= tk.Tk()
 r.title("Medical_Prediction")
 
@@ -21,6 +22,12 @@ def show_entry_fields():
 
 def call_back():
     print("You added a term.")
+
+def clicked():
+  messagebox.showinfo('Calculating Severity Score', 'Severity Level = ')
+ 
+
+
 
 #Making 2 buttons one for quit and one to show
 tk.Button(r,text= "Quit", command= r.quit).grid(row=3, column=0, sticky=tk.W, pady=4)
