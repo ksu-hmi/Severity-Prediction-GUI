@@ -18,4 +18,5 @@
 - [] 16.  Code output display window to print '"Predicted Severity: ", str(returned result)' Assigned: Jana
 - [] 17.  Prepare code to interpret integer value of severity as its text equivilant.  Assigned:  Jana
 - [x] 18. Code test call_model for use in testing of UI.  Assigned: Nathan
--[x] 19.DONE Code for message to inform user of severity level.
+
+  -[x] 19.DONE Code for message to inform user of severity level.
