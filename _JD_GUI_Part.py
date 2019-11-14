@@ -3,12 +3,14 @@ from tkinter import messagebox
 from functools import partial
 r= tk.Tk()
 r.title("Medical_Prediction")
+
+# creating the global variables#
 terms = ''
 sev_level = 0
 #phy_g = 0
 #pat_g = 0
 
-#Add widgets in this area
+#Add widgets in this area#
 
 #Making the box with an input field for user
 tk.Label(r, text="Enter A Medical Term: ").grid(row=0)
@@ -36,11 +38,14 @@ def call_model(string):
         temp = ''
         temp = string[0:10]
         print("test passed, input was a string that started with: ", temp)
+       # To test severity level we will use the randint function to ensure all 1-9 works#
+        # When model is added this will be commented out#
         sev_level = 5 #randint(1,9)
         return sev_level
     else:
         print("test failed, input was not a string")
-
+        
+#Pop up window for the severity level calculation#
 def clicked():
   #when gender variables added, this is where the global variables will be pulled from GUI, converted to 0/1 before calling model
   sev_level = call_model(terms)
@@ -50,6 +55,10 @@ def clicked():
 tk.Button(r,text= "Quit", command= r.quit).grid(row=3, column=0, sticky=tk.W, pady=4)
 tk.Button(r,text="Input", command= show_entry_fields).grid(row=3, column=1, sticky=tk.W, pady=4)
 tk.Button(r, text= "Predict", width= 25,command= clicked).grid(row=4, column = 0, sticky=tk.W, pady=4)
+
+# Will need to add gender buttons with drop down options here(2) #
+
+
 
 #button.pack()
 
