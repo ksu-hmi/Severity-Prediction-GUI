@@ -17,13 +17,16 @@ sev_level = 0
 
 #Making the box with an input field for user
 tk.Label(r, text="Enter A Medical Term: ").grid(row=0)
-e1 = tk.Entry(r)
+e1 = tk.Entry(r, width=40)
 e1.grid(row=0, column=1)
 
 
 #Making a box for current medical terms
+#NOTE: this window should grow or have a scroll bar if text is too much to display
 tk.Label(r, text="Current Medical Terms: ").grid(row=1)
-e2 = tk.Entry(r)
+e2 = tk.Text(r, height=2, width=30)
+e2.insert(tk.END, '')
+e2.config(state=DISABLED)
 e2.grid(row=1, column=1)
 
 #HELP! Attempt to create male and female on the r frame, it doesnt show up)
@@ -38,9 +41,15 @@ def show_entry_fields():
     global terms
     temp_terms = e1.get()
     print("Term: ", temp_terms)
-    terms = terms + " " + temp_terms
-    print("New Term string:  ", terms)
+    if terms == '':
+        terms = temp_terms
+    else:
+        terms = terms + " " + temp_terms
+    e2.config(state=NORMAL)
+    e2.delete(0.0, END) 
+    e2.insert(tk.END, terms)
     e1.delete(0,tk.END)
+    e2.config(state=DISABLED)
 
 def call_back():
     print("You added a term.")
