@@ -78,10 +78,10 @@ def clicked():
     if sev_level ==1: 
         sev_text= "Low Risk"
     elif sev_level ==2: 
-        sev_text= "Middle Risk"
+        sev_text= "Moderate Risk"
     elif sev_level ==3:
         sev_text= "High Risk"
-    messagebox.showinfo('Calculating Severity Score', ('Severity Level = ', sev_level))
+    messagebox.showinfo('Calculated Severity Score', ('Severity Level = ', sev_text))
  
 #Making 2 buttons one for quit and one to show
 tk.Button(r,text= "Quit",width= 15, command= r.quit).grid(row=3, column=0, sticky=tk.W, pady=4)
