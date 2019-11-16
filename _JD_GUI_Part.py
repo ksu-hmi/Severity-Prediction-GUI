@@ -1,3 +1,4 @@
+#importing the Tkinter and Random Lib.#
 import tkinter as tk
 import random
 from tkinter import *
@@ -5,6 +6,8 @@ from tkinter import messagebox
 from functools import partial
 
 r= tk.Tk()
+
+#Adding a title to the GUI window#
 r.title("Medical_Prediction")
 
 # creating the global variables#
@@ -13,9 +16,9 @@ sev_level = 0
 #phy_g = 0
 #pat_g = 0
 
-#Add widgets in this area#
+#Add widgets in this area below:#
 
-#Making the box with an input field for user
+#Making the box with an input field for user to input#
 tk.Label(r, text="Enter A Medical Term: ").grid(row=0)
 e1 = tk.Entry(r, width=40)
 e1.grid(row=0, column=1)
@@ -29,6 +32,7 @@ e2.insert(tk.END, '')
 e2.config(state=DISABLED)
 e2.grid(row=1, column=1)
 
+#MAY DELETE LATER#
 #HELP! Attempt to create male and female on the r frame, it doesnt show up)
 #root = tk.Entry(r)
 #v = IntVar() 
@@ -79,7 +83,7 @@ def call_model(string):
 
 
 
-#Pop up window for the severity level calculation#
+#Pop up window for the severity level calculation and text level#
 def clicked():
     #when gender variables added, this is where the global variables will be pulled from GUI, converted to 0/1 before calling model
     sev_level = call_model(terms)
@@ -90,16 +94,17 @@ def clicked():
         sev_text= "Moderate Risk"
     elif sev_level ==3:
         sev_text= "High Risk"
-    messagebox.showinfo('Calculated Severity Score', ('Severity Level = ', sev_text))
+    messagebox.showinfo('Calculated Severity Score', ("The Calculated Severity Level Predicted From the Model Is:  ", sev_text))
  
-#Making 2 buttons one for quit and one to show
+#Making buttons: Quit, Input, Predict, and Reset #
 tk.Button(r,text= "Quit",width= 15, command= r.quit).grid(row=3, column=0, sticky=tk.W, pady=4)
 tk.Button(r,text="Input", width= 15, command= show_entry_fields).grid(row=0, column=2, sticky=tk.W, pady=4)
 tk.Button(r, text= "Predict", width= 15,command= clicked).grid(row=3, column = 1, sticky=tk.W, pady=4)
 tk.Button(r, text= "Reset", width= 15,command= clicked).grid(row=3, column = 2, sticky=tk.W, pady=4)
-# Will need to add gender buttons with drop down options here(2) #
 
 
+
+#Button pack may be deleted later#
 #button.pack()
 
 
