@@ -27,7 +27,7 @@ e1.grid(row=0, column=1)
 #Making a box for current medical terms
 #NOTE: this window should grow or have a scroll bar if text is too much to display
 tk.Label(r, text="Current Medical Terms: ").grid(row=1)
-e2 = tk.Text(r, height=2, width=30)
+e2 = tk.Text(r, height=2, width=30, fg='firebrick')
 e2.insert(tk.END, '')
 e2.config(state=DISABLED)
 e2.grid(row=1, column=1)
