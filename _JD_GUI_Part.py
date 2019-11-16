@@ -100,7 +100,7 @@ def clicked():
 tk.Button(r,text= "Quit",width= 15, command= r.quit).grid(row=3, column=0, sticky=tk.W, pady=4)
 tk.Button(r,text="Input", width= 15, command= show_entry_fields).grid(row=0, column=2, sticky=tk.W, pady=4)
 tk.Button(r, text= "Predict", width= 15,command= clicked).grid(row=3, column = 1, sticky=tk.W, pady=4)
-tk.Button(r, text= "Reset", width= 15,command= clicked).grid(row=3, column = 2, sticky=tk.W, pady=4)
+tk.Button(r, text= "Reset", width= 15,command= r.quit).grid(row=3, column = 2, sticky=tk.W, pady=4)
 
 
 
