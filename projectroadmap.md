@@ -10,7 +10,7 @@
 - [x] 8. DONE Code initial tkinter GUI frame with input field.  Assigned:  Jana
 - [x] 9. DONE Code initial tkinter GUI buttons.  Assigned:  Jana
 - [x] 10.  DONE Investigate usage of NN for imputing additional data to further improve NN.  Required result:  Demonstrate usage of NN to predict missing data.  Assigned:  Nathan
-- [] 11.  Code Input button to add any strings in the input field to the variable string and display current string above the submit button. Assigned:  Jana
+- [x] 11. DONE Code Input button to add any strings in the input field to the variable string and display current string above the submit button. Assigned:  Jana
 - [x] 12.  DONE Code Submit button to run the call_model(string) function, using the current string variable as input.  The returned string is then displayed as '"Predicted Severity: ", returned_result.'  Assigned:  Jana/Nathan
 - [x] 13. DONE Code call_model(string) to accept GUI input and return a phrase for test purposes.  Required result:  returned_result = 10 characters of input phrase for testing purposes.  Assigned:  Nathan
 - [] 14.  Code call_model(string) to transform input data for usage in prediction.  Return random sev_level.  Required result: returned_result = random int 1-9.  Assigned:  Nathan
