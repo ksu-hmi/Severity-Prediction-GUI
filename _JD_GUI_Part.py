@@ -84,6 +84,8 @@ def call_model(string):
 def reset():
     e1.set("")
     e2.set('')
+    global terms
+    terms = ''
     return
   
 
