@@ -82,10 +82,13 @@ def call_model(string):
          
 #Reset button
 def reset():
-    e1.set("")
-    e2.set('')
     global terms
     terms = ''
+    e2.config(state=NORMAL)
+    e2.delete(0.0, END) 
+    e2.insert(tk.END, terms)
+    e1.delete(0,tk.END)
+    e2.config(state=DISABLED)
     return
   
 
