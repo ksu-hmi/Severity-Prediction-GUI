@@ -25,7 +25,7 @@ e1.grid(row=0, column=1)
 
 
 #Making a box for current medical terms
-#NOTE: this window should grow or have a scroll bar if text is too much to display
+#NOTE: NEED FUNCTIONALITY so this window grows or has a scroll bar if text is too much to display
 tk.Label(r, text="Current Medical Terms: ").grid(row=1)
 e2 = tk.Text(r, height=2, width=30, fg='firebrick')
 e2.insert(tk.END, '')
@@ -36,14 +36,13 @@ e2.grid(row=1, column=1)
 #Making the box pt gender#
 tk.Label(r, text="Enter Patient Gender: ").grid(row=2)
 e3 = tk.Entry(r, width=40)
-e3.grid(row=0, column=1)
+e3.grid(row=2, column=1)
 
 
 #Making the box phy gender#
 tk.Label(r, text="Enter Physician Gender: ").grid(row=3)
 e4 = tk.Entry(r, width=40)
-e4.grid(row=0, column=1)
-
+e4.grid(row=3, column=1)
 
 #MAY DELETE LATER#
 #HELP! Attempt to create male and female on the r frame, it doesnt show up)
@@ -51,8 +50,6 @@ e4.grid(row=0, column=1)
 #v = IntVar() 
 #Radiobutton(root, text='Male', variable=v, value=0).pack(anchor=W)
 #Radiobutton(root, text='Female', variable=v, value=1).pack(anchor=W) 
-
-
 
 
 
