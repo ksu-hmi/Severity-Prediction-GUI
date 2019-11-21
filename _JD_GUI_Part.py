@@ -32,13 +32,28 @@ e2.insert(tk.END, '')
 e2.config(state=DISABLED)
 e2.grid(row=1, column=1)
 
+
+#Making the box pt gender#
+tk.Label(r, text="Enter Patient Gender: ").grid(row=2)
+e3 = tk.Entry(r, width=40)
+e3.grid(row=0, column=1)
+
+
+#Making the box phy gender#
+tk.Label(r, text="Enter Physician Gender: ").grid(row=3)
+e4 = tk.Entry(r, width=40)
+e4.grid(row=0, column=1)
+
+
 #MAY DELETE LATER#
 #HELP! Attempt to create male and female on the r frame, it doesnt show up)
 #root = tk.Entry(r)
 #v = IntVar() 
 #Radiobutton(root, text='Male', variable=v, value=0).pack(anchor=W)
 #Radiobutton(root, text='Female', variable=v, value=1).pack(anchor=W) 
- 
+
+
+
 
 
 def show_entry_fields():
@@ -109,10 +124,10 @@ def clicked():
     messagebox.showinfo('Calculated Severity Score', ("The Calculated Severity Level Predicted From the Model Is:  ", sev_text))
  
 #Making buttons: Quit, Input, Predict, and Reset #
-tk.Button(r,text= "Quit",width= 15, command= r.quit).grid(row=3, column=0, sticky=tk.W, pady=4)
+tk.Button(r,text= "Quit",width= 15, command= r.quit).grid(row=4, column=0, sticky=tk.W, pady=4)
 tk.Button(r,text="Input", width= 15, command= show_entry_fields).grid(row=0, column=2, sticky=tk.W, pady=4)
-tk.Button(r, text= "Predict", width= 15,command= clicked).grid(row=3, column = 1, sticky=tk.W, pady=4)
-tk.Button(r, text= "Reset", width= 15,command= reset).grid(row=3, column = 2, sticky=tk.W, pady=4)
+tk.Button(r, text= "Predict", width= 15,command= clicked).grid(row=4, column = 1, sticky=tk.W, pady=4)
+tk.Button(r, text= "Reset", width= 15,command= reset).grid(row=4, column = 2, sticky=tk.W, pady=4)
 
 
 
@@ -124,3 +139,30 @@ tk.Button(r, text= "Reset", width= 15,command= reset).grid(row=3, column = 2, st
 
 # This needs to be at the end
 r.mainloop()
+
+
+
+
+
+
+##########
+#r = tk.Tk()
+
+#v = tk.IntVar()
+
+#tk.Label(r, 
+#        text="""Choose the patient gender:""",
+#        justify = tk.LEFT,
+#        padx = 20).pack()
+#tk.Radiobutton(r, 
+#              text="Male",
+#              padx = 20, 
+#              variable=v, 
+#              value=1).pack(anchor=tk.W)
+#tk.Radiobutton(r, 
+#              text="Female",
+#              padx = 20, 
+#              variable=v, 
+#              value=2).pack(anchor=tk.W)
+#
+#r.mainloop()
