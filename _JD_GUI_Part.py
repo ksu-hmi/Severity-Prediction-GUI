@@ -8,7 +8,7 @@ from functools import partial
 r= tk.Tk()
 
 #Adding a title to the GUI window#
-r.title("Medical_Prediction")
+r.title("Patient Medical Term Prediction Calculator")
 
 # creating the global variables#
 terms = ''
@@ -19,7 +19,7 @@ sev_level = 0
 #Add widgets in this area below:#
 
 #Making the box with an input field for user to input#
-tk.Label(r, text="Enter A Medical Term: ").grid(row=0)
+tk.Label(r, text="Enter Medical Term/ Terms: ").grid(row=0)
 e1 = tk.Entry(r, width=40)
 e1.grid(row=0, column=1)
 
