@@ -35,21 +35,25 @@ e2.grid(row=1, column=1)
 
 #Making the box pt gender#
 tk.Label(r, text="Enter Patient Gender: ").grid(row=2)
-e3 = tk.Entry(r, width=40)
-e3.grid(row=2, column=1)
-
+#e3 = tk.Entry(r, width=40)
+#e3.grid(row=2, column=1)
+v1 = IntVar() 
+v1.set(0)
+Radiobutton(r, text='Male', variable=v1, value=0).grid(row=2, column=1)
+Radiobutton(r, text='Female', variable=v1, value=1).grid(row=2, column=2) 
 
 #Making the box phy gender#
 tk.Label(r, text="Enter Physician Gender: ").grid(row=3)
-e4 = tk.Entry(r, width=40)
-e4.grid(row=3, column=1)
+#e4 = tk.Entry(r, width=40)
+#e4.grid(row=3, column=1)
 
 #MAY DELETE LATER#
 #HELP! Attempt to create male and female on the r frame, it doesnt show up)
 #root = tk.Entry(r)
-#v = IntVar() 
-#Radiobutton(root, text='Male', variable=v, value=0).pack(anchor=W)
-#Radiobutton(root, text='Female', variable=v, value=1).pack(anchor=W) 
+v2 = IntVar() 
+v2.set(0)
+Radiobutton(r, text='Male', variable=v2, value=0).grid(row=3, column=1)
+Radiobutton(r, text='Female', variable=v2, value=1).grid(row=3, column=2) 
 
 
 
@@ -111,6 +115,8 @@ def reset():
 def clicked():
     #when gender variables added, this is where the global variables will be pulled from GUI, converted to 0/1 before calling model
     sev_level = call_model(terms)
+    print("cl gen is ", v1.get())
+    print("prov gen is ", v2.get())
     sev_text=""
     if sev_level ==1: 
         sev_text= "Low Risk"
@@ -119,7 +125,7 @@ def clicked():
     elif sev_level ==3:
         sev_text= "High Risk"
     messagebox.showinfo('Calculated Severity Score', ("The Calculated Severity Level Predicted From the Model Is:  ", sev_text))
- 
+    
 #Making buttons: Quit, Input, Predict, and Reset #
 tk.Button(r,text= "Quit",width= 15, command= r.quit).grid(row=4, column=0, sticky=tk.W, pady=4)
 tk.Button(r,text="Input", width= 15, command= show_entry_fields).grid(row=0, column=2, sticky=tk.W, pady=4)
