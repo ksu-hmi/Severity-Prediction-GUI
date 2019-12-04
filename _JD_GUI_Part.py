@@ -114,7 +114,7 @@ def reset():
 #Pop up window for the severity level calculation and text level#
 def clicked():
     #when gender variables added, this is where the global variables will be pulled from GUI, converted to 0/1 before calling model
-    sev_level = call_model(terms)
+    sev_level = call_model(terms, v1.get(), v2.get())
     print("cl gen is ", v1.get())
     print("prov gen is ", v2.get())
     sev_text=""

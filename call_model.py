@@ -1,6 +1,6 @@
 terms = ''
 
-def call_model(string):
+def call_model(string, cl_gen, phys_gen):
     if type(string) == str:
         temp = ''
         temp = string[0:10]
