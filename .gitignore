@@ -103,3 +103,10 @@ venv.bak/
 # mypy
 .mypy_cache/
 call_model.py
+model.h5
+x1_pipe1.sav
+x1_pipe2.sav
+x2_pipe1.sav
+x2_pipe2.sav
+x3_pipe1.sav
+x3_pipe2.sav
