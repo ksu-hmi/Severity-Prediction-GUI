@@ -13,9 +13,12 @@
 - [x] 11. DONE Code Input button to add any strings in the input field to the variable string and display current string above the submit button. Assigned:  Jana
 - [x] 12.  DONE Code Submit button to run the call_model(string) function, using the current string variable as input.  The returned string is then displayed as '"Predicted Severity: ", returned_result.'  Assigned:  Jana/Nathan
 - [x] 13. DONE Code call_model(string) to accept GUI input and return a phrase for test purposes.  Required result:  returned_result = 10 characters of input phrase for testing purposes.  Assigned:  Nathan
-- [] 14.  Code call_model(string) to transform input data for usage in prediction.  Return random sev_level.  Required result: returned_result = random int 1-9.  Assigned:  Nathan
-- [] 15.  Code call_model(string) to run prediction using transformed input data and Return predicted severity.  Required result:  returned_result = integer value for predicted severity.  Assigned:  Nathan
-- [] 16.  Code output display window to print '"Predicted Severity: ", str(returned result)' Assigned: Jana
-- [] 17.  Prepare code to interpret integer value of severity as its text equivilant.  Assigned:  Jana
+- [x] 14.  DONE Code call_model(string) to transform input data for usage in prediction.  Return random sev_level.  Required result: returned_result = random int 1-9.  Assigned:  Nathan
+- [x] 15.  DONE Code call_model(string) to run prediction using transformed input data and Return predicted severity.  Required result:  returned_result = integer value for predicted severity.  Assigned:  Nathan
+- [x] 16.  DONE Code output display window to print '"Predicted Severity: ", str(returned result)' Assigned: Jana
+- [x] 17.  DONE Prepare code to interpret integer value of severity as its text equivilant.  Assigned:  Jana
 - [x] 18. Code test call_model for use in testing of UI.  Assigned: Nathan
- - [x] 19. DONE Code for message to inform user of severity level.
+- [x] 19. DONE Code for message to inform user of severity level. Assigned: Jana
+- [x] 20. DONE Code call_model(string, Pgender, Cgender) to run prediction using transformed input data and Return predicted severity.  Required result:  returned_result = integer value for predicted severity. Assigned: Nathan
+- [] 21. Troubleshoot model and data preparation pipeline to improve accuracy. Assigned: Nathan
+- [x] 22. DONE Code for message to inform user of severity level.

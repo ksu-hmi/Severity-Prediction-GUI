@@ -4,6 +4,7 @@ import random
 from tkinter import *
 from tkinter import messagebox
 from functools import partial
+from call_model import *
 
 r= tk.Tk()
 
@@ -78,7 +79,7 @@ def call_back():
 
 # test call model.  actual model includes PHI data so will not be on GitHub.  
 # For testing test model output sets sev_level = 5 or to random int 1-9
-def call_model(string):
+'''def call_model(string):
     print("function called")
     global terms
     global sev_level
@@ -92,7 +93,7 @@ def call_model(string):
         return sev_level
         
     else:
-        print("test failed, input was not a string")
+        print("test failed, input was not a string")'''
 
 
          
@@ -114,15 +115,15 @@ def reset():
 #Pop up window for the severity level calculation and text level#
 def clicked():
     #when gender variables added, this is where the global variables will be pulled from GUI, converted to 0/1 before calling model
-    sev_level = call_model(terms)
-    print("cl gen is ", v1.get())
-    print("prov gen is ", v2.get())
+    sev_level = call_model(terms, v1.get(), v2.get())
+    #print("cl gen is ", v1.get())
+    #print("prov gen is ", v2.get())
     sev_text=""
-    if sev_level ==1: 
+    if sev_level == 0: 
         sev_text= "Low Risk"
-    elif sev_level ==2: 
+    elif sev_level == 1: 
         sev_text= "Moderate Risk"
-    elif sev_level ==3:
+    elif sev_level == 2:
         sev_text= "High Risk"
     messagebox.showinfo('Calculated Severity Score', ("The Calculated Severity Level Predicted From the Model Is:  ", sev_text))
     
