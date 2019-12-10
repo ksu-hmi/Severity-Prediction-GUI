@@ -9,7 +9,7 @@ from call_model import *
 r= tk.Tk()
 
 #Adding a title to the GUI window#
-r.title("Patient Medical Term Prediction Calculator")
+r.title("Patient Medical Term Prediction Calculator- Jana ")
 
 # creating the global variables#
 terms = ''
@@ -49,7 +49,7 @@ tk.Label(r, text="Enter Physician Gender: ").grid(row=3)
 #e4.grid(row=3, column=1)
 
 #MAY DELETE LATER#
-#HELP! Attempt to create male and female on the r frame, it doesnt show up)
+
 #root = tk.Entry(r)
 v2 = IntVar() 
 v2.set(0)
