@@ -38,7 +38,7 @@ def call_model(string, cl_gen, phys_gen):
 
     x2_p1 = x2_pipe1.transform(xterms_pred_df)
     x2_p2 = x2_pipe2.transform(x2_p1)
-    x2_pred_df = pd.DataFrame(x2_p2)
+    x2_pred_df = pd.DataFrame(x2_p2.toarray())
 
     x3_p1 = x3_pipe1.transform(xterms_pred_df)
     x3_p2 = x3_pipe2.transform(x3_p1)
@@ -57,10 +57,13 @@ def call_model(string, cl_gen, phys_gen):
 
     for i in range(y_pred_df.shape[0]):
         if y_pred_df.loc[i, 0] == 1:
+            print("low")
             return 0
         if y_pred_df.loc[i, 1] == 1:
+            print("mid")
             return 1
         if y_pred_df.loc[i, 2] == 1:
+            print("high")
             return 2
 
     
